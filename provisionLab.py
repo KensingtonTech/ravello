@@ -19,7 +19,7 @@ def die(text):
 def printOpts():
   print 'Usage: ' + sys.argv[0] + """ [OPTIONS]
   
-Provision one or more Ravello application from an existing blueprint. You will be prompted for a password.
+Provision one or more Ravello applications from an existing blueprint. You will be prompted for a password.
 
 Example: 
 
@@ -51,7 +51,7 @@ def readConfFile(filename): #returns json object from configuration file
 def main(user, num, confFile):
   confData = readConfFile(confFile)
   password = getpass.getpass('Password:')
-  r = ravello(urlBase,user,password)
+  r = ravello(urlBase, user, password)
   
   if not "appDefinitions" in confData:
     die("ERROR: there is no 'appDefinitions' section in your configuration file")
